@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root {
+    --primary-bg-color: rgb(48, 48, 122);
+    --secondary-bg-color: rgb(10, 26, 49);
+
+    --main-margin: 5rem 15rem;
+    --main-margin-small: auto 2rem;
+    --main-margin-medium: auto 5rem;
+
+    --main-article-width: 18rem;
+    --main-article-width-small: 10rem;
+    --main-article-width-medium: 15rem;
+
+    --font-color: white;
+    --nav-font-size: 1.6rem;
+
+    --chat-text-font-size: 1.6rem
+}
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    /* this set what 1rem is */
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, var(--primary-bg-color), var(--secondary-bg-color));
+
+
+    font-family: 'Lato', sans-serif;
+}
+
+.body-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav-item {
+    margin: 1rem;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: var(--nav-font-size);
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.nav-item:hover {
+    border: 1px solid var(--font-color);
+    border-radius: 5px;
+
+}
+
+/* ---------------------------------------------------------------------------- */
+
+h2 {
+    color: var(--font-color);
+    margin: var(--main-margin);
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+@media screen and (max-width:40rem) {
+    h2 {
+        color: var(--font-color);
+        margin: var(--main-margin-small);
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
+
+
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: center;
+
+
+    margin: var(--main-margin);
+    /* border: 1px solid var(--font-color); */
+}
+
+.container-item {
+    border: 1px solid var(--font-color);
+    justify-self: center;
+    align-self: center;
+}
+
+article {
+    width: var(--main-article-width);
+}
+
+article img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 80rem) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        margin: var(--main-margin-medium);
+
+    }
+
+    article {
+        width: var(--main-article-width-medium);
+    }
+}
+
+
+@media screen and (max-width: 40rem) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        margin: var(--main-margin-small);
+
+    }
+
+    article {
+        width: var(--main-article-width-small);
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
+footer {
+    padding: 1rem;
+}
+
+/* ---------------------------------------------------------------------------- */
+form {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ---------------------------------------------------------------------------- */
+textarea {
+    width: 85%;
+    border-radius: 5px;
+    padding: 1rem;
+
+    font-size: 1.6rem;
+}
+
+/* ---------------------------------------------------------------------------- */
+button {
+    width: 10%;
+    font-size: 1.6rem;
+}
+
+/* ---------------------------------------------------------------------------- */
+.chat-container {
+    display: flex;
+    flex-direction: row;
+
+    font-size: var(--chat-text-font-size);
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+p {
+
+    padding: 1rem;
+    margin: 0.5rem 1.5rem;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    width: fit-content;
+    background-color: aqua;
+}
+
+.ai {
+    background-color: salmon;
+}
+
+/* ---------------------------------------------------------------------------- */
+@media screen and (min-width: 40rem) {
+    .chat-box {
+        margin: 5rem 15rem;
+    }
+}
+
+/* ---------------------------------------------------------------------------- */

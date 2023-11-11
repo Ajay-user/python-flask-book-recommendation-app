@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shop 📚</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="body-container">
+      <header>
+        <nav>
+          <a class="nav-item" href="/">🏠 Book Shop</a>
+          <a class="nav-item" href="/chat">👨‍💻 Chat Room</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="chat-box">
+          {% for txt in chats %} {%if txt.origin=="ai" %}
+          <div class="chat-container">
+            <span>🤖</span>
+            <p class="{{txt.origin}}">{{txt.text}}</p>
+          </div>
+
+          {% else %}
+          <div class="chat-container row-reverse">
+            <span>🧑</span>
+            <p class="{{txt.origin}}">{{txt.text}}</p>
+          </div>
+
+          {% endif %} {% endfor %}
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-container">
+          <form action="chat" method="post">
+            <textarea name="prompt" id="prompt"></textarea>
+            <button type="submit">🤖</button>
+          </form>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

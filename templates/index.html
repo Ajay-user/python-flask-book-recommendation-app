@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shop 📚</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="body-container">
+      <header>
+        <nav>
+          <a class="nav-item" href="/">🏠 Book Shop</a>
+          <a class="nav-item" href="/chat">👨‍💻 Chat Room</a>
+        </nav>
+      </header>
+
+      <main>
+        <h2>Popular Books</h2>
+        <div class="container">
+          {% for row in popular_books.iterrows()%}
+
+          <!--START OF ARTICLE  -->
+          <div class="container-item">
+            <article class="book">
+              <img src={{row[1]['Image-URL-M']}} alt="Book" />
+            </article>
+          </div>
+          <!-- END OF ARTICLE  -->
+
+          {% endfor %}
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
