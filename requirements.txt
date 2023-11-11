@@ -1,4 +1,4 @@
-blinker==1.7.0
+blinker
 click==8.1.7
 colorama==0.4.6
 Flask==3.0.0
@@ -17,4 +17,3 @@ six==1.16.0
 threadpoolctl==3.2.0
 tzdata==2023.3
 Werkzeug==3.0.1
-blinker
