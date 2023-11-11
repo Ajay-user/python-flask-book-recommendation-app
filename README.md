@@ -1,3 +1,3 @@
 ## Book Recommendation Application
 
-[starter code]
+[ starter code ]
